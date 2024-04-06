@@ -119,7 +119,7 @@
         .btn-brand:hover,
         .btn-brand:focus{
             background-color: var(--color-brand2);
-            color: var(--color-base);
+            color: var(--color-base2);
             border-color: var(--color-brand2);
         }
         .link-custom{
