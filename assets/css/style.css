@@ -16,6 +16,7 @@
         background-color: var(--color-base2);
         color: var(--color-body);
         font-family: var(--font-base), sans-serif;
+        overflow-x: hidden;
     }
 
     h1,h2,h3,h4,h5,h6{
@@ -123,7 +124,7 @@
             border-color: var(--color-brand2);
         }
         .link-custom{
-            font-weight: 700;
+            font-weight: 900;
             position: relative;
 
         }
@@ -138,6 +139,15 @@
             transition: all 0.4s;
         }
 
+        @media (max-width: 767px) {
+            .card-custom-content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              height: 100%; /* Ensure content takes up full height */
+            }
+          }
+
         .link-custom:hover::after{
             width: 100%;
         }
@@ -150,6 +160,10 @@
 
         .card-custom:hover .card-custom-image img{
             transform: scale(1.1);
+        }
+
+        #work{
+            overflow-y: hidden;
         }
 
         #contact .form-control{
@@ -168,18 +182,39 @@
             height: 44px;
         }
 
+  
         /* Social icons */
-        .social-icons{
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-        }
+/* Social icons */
+.social-icons {
+    position: absolute;
+    bottom: 60px;
+    left: 55%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
 
-        .social-icons a{
-            width: 40px;
-            height: 40px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--color-base);
-            border-radius: 100px;
-            font-size: 24px;
-        }
+.social-icons a {
+    width: 70px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--color-body);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}

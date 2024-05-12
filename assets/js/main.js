@@ -15,3 +15,32 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+// main.js
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Function to handle form submission
+  function handleFormSubmission(event) {
+    event.preventDefault();
+
+    // Get form values
+    var name = document.getElementById("nameInput").value;
+    var email = document.getElementById("emailInput").value;
+    var subject = document.getElementById("subjectInput").value;
+    var message = document.getElementById("messageInput").value;
+
+    // Compose mailto link with form data
+    var mailtoLink = "mailto:taylamber352@gmail.com" +
+                     "?subject=" + encodeURIComponent(subject) +
+                     "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage: " + message);
+
+    // Open default email client
+    window.location.href = mailtoLink;
+  }
+
+  // Add event listener to the form
+  var contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", handleFormSubmission);
+  }
+});
