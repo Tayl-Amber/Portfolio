@@ -185,7 +185,21 @@
 .container{
     gap: 30px;
 }
-  
+
+.form textarea-field .error-text{
+    margin-top: -10px;
+}
+
+.form textarea::placeholder{
+    resize: none;
+}
+  .error-text{
+    font-size: 14.5px;
+    color: red;
+    text-align: left;
+    margin: -5px 0 10px 0;
+    display: none;
+  }
         /* Social icons */
 .social-icons {
     display: flex;

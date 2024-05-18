@@ -18,29 +18,50 @@ AOS.init({
 
 // main.js
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Function to handle form submission
-  function handleFormSubmission(event) {
-    event.preventDefault();
+/* const form = document.querySelector('form');
+const name = document.getElementById("name");
+const Email = document.getElementById("email");
+const subject = document.getElementById("subject");
+const message = document.getElementById("message");
 
-    // Get form values
-    var name = document.getElementById("nameInput").value;
-    var email = document.getElementById("emailInput").value;
-    var subject = document.getElementById("subjectInput").value;
-    var message = document.getElementById("messageInput").value;
 
-    // Compose mailto link with form data
-    var mailtoLink = "mailto:taylamber352@gmail.com" +
-                     "?subject=" + encodeURIComponent(subject) +
-                     "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage: " + message);
 
-    // Open default email client
-    window.location.href = mailtoLink;
-  }
 
-  // Add event listener to the form
-  var contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", handleFormSubmission);
-  }
-});
+
+function send_email(){
+
+  const bodyMessage = `Name: ${name.value} <br> Email: ${Email.value} <br> Subject: ${subject.value} <br> Message: ${message.value}`;
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "taylamber352@gmail.com",
+    Password : "115254242A2D623CC99A6F89A5843101DF55",
+    To : 'taylamber352@gmail.com',
+    From : "taylamber352@gmail.com",
+    Subject : subject.value,
+    Body : bodyMessage
+}).then(
+  message => alert(message)
+);
+}
+
+from.addEventListener('submit', (e) => {
+  e.preventDefault();
+  send_email();
+}); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
