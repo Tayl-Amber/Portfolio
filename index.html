@@ -211,15 +211,15 @@
                       <input id="emailInput" type="email" class="form-control" placeholder="Enter your email">
                       <div class="error-text">Email can't be blank</div>
                     </div>
-                  <div class="form-group col-12">
+                  <!-- <div class="form-group col-12">
                       <input id="subjectInput" type="text" class="form-control" placeholder="Enter subject">
                       <div class="error-text">Subject can't be blank</div>
-                    </div>
+                    </div -->
                   <div class="form-group col-12">
                       <textarea id="messageInput" rows="4" class="form-control" placeholder="Enter your message"></textarea>
                   </div>
                   <div class="form-group col-12 d-grid">
-                    <button type="submit" class="btn btn-brand">Contact me via Email</button>
+                    <button type="button" onclick="SendEmail();" class="btn btn-brand">Contact me via Email</button>
                   <div class="error-text">Message can't be blank</div>
                   </div>
               </form>
@@ -232,41 +232,47 @@
 </div>
 </section>
 <!-- //Contact Me -->
-
-      </div>
+  </div>
   
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail(event) {
-          event.preventDefault(); // Prevent the form from submitting and refreshing the page
-          
-          // Get form input values
-          const emailInput = document.getElementById("emailInput").value;
-          const nameInput = document.getElementById("nameInput").value;
-          const subjectInput = document.getElementById("subjectInput").value;
-          const messageInput = document.getElementById("messageInput").value;
-          
-          // Configure email sending using SMTP.js with TLS/SSL enabled
-          Email.send({
-              Host: "smtp.elasticemail.com",
-              Username: "tayalamber02@gmail.com", // Replace with your Elastic Email SMTP username
-              Password: "2F98FB4B4D2D1A75F8228DE2E481A3944B71", // Replace with your Elastic Email SMTP password
-              To: "taylamber352@gmail.com",
-              From: emailInput,
-              Subject: subjectInput,
-              Body: `Name: ${nameInput} <br> Email: ${emailInput} <br> Message: ${messageInput}`,
-              SecureToken: "C48A2ABF61838537162C471D4D542BBCD8DE8492B7BEA3C50057341C88AFC3B94F47A33173FFA2DECFB12789F555437B" // Add your Elastic Email secure token here
-          }).then(
-              message => alert(message)
-          );
-      }
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "N7GVF5iC3veJeDuFT",
+      });
+   })();
+</script>
+  </body>
+  </html>
   
-      // Attach sendEmail function to form submit event
-      document.getElementById('contactForm').addEventListener('submit', sendEmail);
-  </script>
-  
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
