@@ -25,6 +25,6 @@ function SendEmail() {
   emailjs
     .send("service_l7dvs3p", "template_fxhpiej", params)
     .then(function (res) {
-      alert("Success!" + res.status);
+      alert("Mail Sent! \n\n In case if you don't get my message back, Check your Spam Folder!!" );
     });
 }
