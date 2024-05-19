@@ -18,7 +18,7 @@ AOS.init({
 
 // main.js
 // main.js
-
+/* 
 document.addEventListener("DOMContentLoaded", function() {
   // Function to handle form submission
   function handleFormSubmission(event) {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (contactForm) {
     contactForm.addEventListener("submit", handleFormSubmission);
   }
-});
+}); */
  
 
 
