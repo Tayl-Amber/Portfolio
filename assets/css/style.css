@@ -18,6 +18,58 @@
         font-family: var(--font-base), sans-serif;
         overflow-x: hidden;
     }
+    /* Profile pic animation */
+    .profile-pic-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-pic-container img.profile-pic {
+  z-index: 1;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--color-brand);
+  animation: rotate 5s linear infinite;
+}
+
+.circle1 {
+  width: 100px;
+  height: 100px;
+  top: -20px;
+  left: -20px;
+  animation-duration: 5s;
+}
+
+.circle2 {
+  width: 130px;
+  height: 130px;
+  top: -35px;
+  left: -35px;
+  animation-duration: 7s;
+}
+
+.circle3 {
+  width: 160px;
+  height: 160px;
+  top: -50px;
+  left: -50px;
+  animation-duration: 9s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, 0) rotate(-360deg);
+  }
+}
+/* Profile pic animation */
+
 
     h1,h2,h3,h4,h5,h6{
         color: var(--color-heading);
